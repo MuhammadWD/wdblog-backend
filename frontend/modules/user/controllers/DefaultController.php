@@ -37,6 +37,7 @@ class DefaultController extends Controller
         if (!Yii::$app->user->isGuest) {
             return $this->goHome();
         }
+        //rf4CRM1p
 
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {

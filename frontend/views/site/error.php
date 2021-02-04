@@ -5,7 +5,6 @@
 /* @var $message string */
 /* @var $exception Exception */
 
-use yii\helpers\Html;
 use yii\helpers\Url;
 
 $this->title = $name;
@@ -15,7 +14,7 @@ $this->title = $name;
     <section class="error-page">
         <div class="preloader">
             <div class="preloader-image">
-                <div class="four-zero-four">404</div><img src="img/logorype.svg" alt="">
+                <div class="four-zero-four">404</div><img src="/img/logorype.svg" alt="">
             </div>
             <div class="phrase"> Простите, но кажется эта страница<br/> пропала в глубинах мировой паутины </div>
             <div class="loader"></div>

@@ -60,8 +60,8 @@ AppAsset::register($this);
                 <?php endif; ?>
             </div>
             <div class="logo">
-                <a class="desktop-logo" href="<?= Url::to('site/index')?>"><img src="/img/logorype.svg" alt="desktop-logo"></a>
-                <a class="mobile-logo" href="<?= Url::to('site/index')?>"><img src="/img/mobile-logo.svg" alt="mobil-logo"></a>
+                <a class="desktop-logo" href="<?= Url::to('/site/index')?>"><img src="/img/logorype.svg" alt="desktop-logo"></a>
+                <a class="mobile-logo" href="<?= Url::to('/site/index')?>"><img src="/img/mobile-logo.svg" alt="mobil-logo"></a>
             </div>
             <div class="left-group">
                 <div class="search-icon">
@@ -79,40 +79,40 @@ AppAsset::register($this);
         <div class="menu-plashka">
             <ul class="menu-list">
                 <li class="menu-item">
-                    <a href="<?= Url::to('site/index')?>" class="menu-link"><img src="/img/icons/menu/menu-home.svg" alt="home-icon"> Главная</a>
+                    <a href="<?= Url::to('/site/index')?>" class="menu-link"><img src="/img/icons/menu/menu-home.svg" alt="home-icon"> Главная</a>
                 </li>
                 <li class="menu-item">
-                    <a href="<?= Url::to('site/categories')?>" class="menu-link"><img class="list" src="/img/icons/menu/menu-link.svg" alt="category-icon"> Категории</a>
+                    <a href="<?= Url::to('/site/categories')?>" class="menu-link"><img class="list" src="/img/icons/menu/menu-link.svg" alt="category-icon"> Категории</a>
                 </li>
                 <li class="menu-item">
-                    <a href="<?= Url::to('site/feed')?>" class="menu-link"><img src="/img/icons/menu/menu-feed.svg" alt="feed-icon"> Лента</a>
+                    <a href="<?= Url::to('/site/feed')?>" class="menu-link"><img src="/img/icons/menu/menu-feed.svg" alt="feed-icon"> Лента</a>
                 </li>
                 <li class="menu-item">
-                    <a href="<?= Url::to('site/about')?>" class="menu-link"><img class="info" src="/img/icons/menu/menu-info.svg" alt="about-icon"> О проекте</a>
+                    <a href="<?= Url::to('/site/about')?>" class="menu-link"><img class="info" src="/img/icons/menu/menu-info.svg" alt="about-icon"> О проекте</a>
                 </li>
             </ul>
             <div class="menu-categories">
                 <ul class="categories-list">
                     <li class="categories-item">
-                        <a href="<?= Url::to('post/categories/beginners')?>" class="categories-link">Начинающим</a>
+                        <a href="<?= Url::to('/post/categories/beginners')?>" class="categories-link">Начинающим</a>
                     </li>
                     <li class="categories-item">
-                        <a href="<?= Url::to('post/categories/frontend')?>" class="categories-link">Фронтенд</a>
+                        <a href="<?= Url::to('/post/categories/frontend')?>" class="categories-link">Фронтенд</a>
                     </li>
                     <li class="categories-item">
-                        <a href="<?= Url::to('post/categories/backend')?>" class="categories-link">Бэкенд</a>
+                        <a href="<?= Url::to('/post/categories/backend')?>" class="categories-link">Бэкенд</a>
                     </li>
                     <li class="categories-item">
-                        <a href="<?= Url::to('post/categories/design')?>" class="categories-link">Design</a>
+                        <a href="<?= Url::to('/post/categories/design')?>" class="categories-link">Design</a>
                     </li>
                     <li class="categories-item">
-                        <a href="<?= Url::to('post/categories/news')?>" class="categories-link">Новости</a>
+                        <a href="<?= Url::to('/post/categories/news')?>" class="categories-link">Новости</a>
                     </li>
                     <li class="categories-item">
-                        <a href="<?= Url::to('post/categories/history')?>" class="categories-link">Истории</a>
+                        <a href="<?= Url::to('/post/categories/history')?>" class="categories-link">Истории</a>
                     </li>
                     <li class="categories-item">
-                        <a href="<?= Url::to('site/authors')?>" class="categories-link">Авторы</a>
+                        <a href="<?= Url::to('/site/authors')?>" class="categories-link">Авторы</a>
                     </li>
                 </ul>
             </div>
@@ -123,25 +123,25 @@ AppAsset::register($this);
         <div class="header-categories">
             <ul class="categories-list">
                 <li class="categories-item">
-                    <a href="<?= Url::to('post/categories/beginners')?>" class="categories-link">Начинающим</a>
+                    <a href="<?= Url::to('/post/categories/beginners')?>" class="categories-link">Начинающим</a>
                 </li>
                 <li class="categories-item">
-                    <a href="<?= Url::to('post/categories/frontend')?>" class="categories-link">Фронтенд</a>
+                    <a href="<?= Url::to('/post/categories/frontend')?>" class="categories-link">Фронтенд</a>
                 </li>
                 <li class="categories-item">
-                    <a href="<?= Url::to('post/categories/backend')?>" class="categories-link">Бэкенд</a>
+                    <a href="<?= Url::to('/post/categories/backend')?>" class="categories-link">Бэкенд</a>
                 </li>
                 <li class="categories-item">
-                    <a href="<?= Url::to('post/categories/design')?>" class="categories-link">Design</a>
+                    <a href="<?= Url::to('/post/categories/design')?>" class="categories-link">Design</a>
                 </li>
                 <li class="categories-item">
-                    <a href="<?= Url::to('post/categories/news')?>" class="categories-link">Новости</a>
+                    <a href="<?= Url::to('/post/categories/news')?>" class="categories-link">Новости</a>
                 </li>
                 <li class="categories-item">
-                    <a href="<?= Url::to('post/categories/history')?>" class="categories-link">Истории</a>
+                    <a href="<?= Url::to('/post/categories/history')?>" class="categories-link">Истории</a>
                 </li>
                 <li class="categories-item">
-                    <a href="<?= Url::to('site/authors')?>" class="categories-link">Авторы</a>
+                    <a href="<?= Url::to('/site/authors')?>" class="categories-link">Авторы</a>
                 </li>
             </ul>
         </div>
@@ -174,12 +174,12 @@ AppAsset::register($this);
                     <h3>или используя почту</h3>
                     <?php $form = ActiveForm::begin(['class' => 'join-form']); ?>
 
-                        <?= $form->field($login, 'email')->textInput()->label('Email') ?>
+                        <? // $form->field($login, 'email')->textInput()->label('Email') ?>
 
-                        <?= $form->field($login, 'username')->textInput(['autofocus' => true])
-                            ->label('Username'); ?>
+                        <? // $form->field($login, 'username')->textInput(['autofocus' => true])
+                            //->label('Username'); ?>
 
-                        <? $form->field($login, 'password')->passwordInput()->label('Password') ?>
+                        <? // $form->field($login, 'password')->passwordInput()->label('Password') ?>
 
                         <div class="toggle-button toggle-button--tuli">
                             <input id="toggleButton11" type="checkbox">
@@ -223,10 +223,10 @@ AppAsset::register($this);
                     <?php $form = ActiveForm::begin(['class' => 'join-form']); ?>
                     <form action="" class="join-form">
 
-                        <?= $form->field($register, 'email')->textInput(['maxLength' => true])->label('Email'); ?>
+                        <? // $form->field($register, 'email')->textInput(['maxLength' => true])->label('Email'); ?>
 
                         <label for="psw">Password</label>
-                        <?= $form->field($register, 'password')->passwordInput()->label('Password'); ?>
+                        <? // $form->field($register, 'password')->passwordInput()->label('Password'); ?>
 
                         <div class="toggle-button toggle-button--tuli">
                             <? // $form->field($register, 'rememberMe')->checkbox(['id' => 'toggleButton12'])->label('Запомнить меня') ?>

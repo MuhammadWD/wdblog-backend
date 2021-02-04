@@ -2,6 +2,7 @@
 namespace frontend\controllers;
 
 use common\models\Post;
+use common\models\User;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
@@ -67,8 +68,12 @@ class SiteController extends Controller
     {
         $posts = Post::find()->with('author', 'category', 'tag')->where(['status' => 1])
             ->orderBy('date DESC')->all();
+        $big_top = Post::find()->with('author', 'category', 'tag')->where(['status' => 1, 'viewed' => 50])
+            ->orderBy('date DESC')->all();
+
         return $this->render('index', [
             'posts' => $posts,
+            'top' => $big_top,
         ]);
     }
 
@@ -110,6 +115,11 @@ class SiteController extends Controller
 
     public function actionAuthors()
     {
-        return $this->render('authors');
+        $author = User::find()->where(['status' => 10])->all();
+
+        return $this->render('authors', [
+            'authors' => $author,
+        ]);
     }
+
 }

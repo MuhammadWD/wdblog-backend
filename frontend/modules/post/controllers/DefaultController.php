@@ -42,10 +42,14 @@ class DefaultController extends Controller
 
     public function actionView($url){
         $currentUser = Yii::$app->user->identity;
+        $thisCategory = Post::findAll('category');
+
+        $category_aside = Post::find()->where(['category' => $thisCategory, 'viewed' => '20']);
 
         return $this->render('view', [
             'post' => $this->findPost($url),
-            'currentUser' => $currentUser
+            'currentUser' => $currentUser,
+            'categoryAside' => $category_aside,
         ]);
     }
 

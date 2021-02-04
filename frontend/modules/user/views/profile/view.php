@@ -1,5 +1,6 @@
 <?php
     /* @var $user common\models\User */
+    /* @var $posts common\models\Post */
     /* @var $currentUser common\models\User */
 
 use yii\helpers\Url;
@@ -112,28 +113,37 @@ $this->title = $user->username . ' — ' . 'Личный кабинет';
             <!-- Posts -->
 
             <section class="top-posts">
-                <div class="top-post __big">
-                    <a href="page.html" class="post-link">
-                        <img src="/img/background/Rectangle 5.png" alt="" class="post-image">
-                        <div class="post-title">
-                            <div class="title-header">
-                                <p>Статьи | 02, Янв 2021</p>
-                            </div>
-                            <h2>5 Необходимых гаджета в 2021 году.</h2>
-                            <div class="title-border"></div>
-                            <div class="title-footer">
-                                <div class="post-views">
-                                    <img src="/img/icons/views.svg" alt="">
-                                    <p>500</p>
+
+                <?php foreach ($posts as $post): ?>
+
+                    <?php while ($post <= 1): ?>
+
+                    <div class="top-post __big">
+                        <a href="page.html" class="post-link">
+                            <img src="/uploads/<?= $post->photo; ?>" alt="" class="post-image">
+                            <div class="post-title">
+                                <div class="title-header">
+                                    <p><?= $post->category->title; ?> | <?= $post->date; ?></p>
                                 </div>
-                                <div class="post-bookmark">
-                                    <img src="/img/icons/bookmarks.svg" alt="">
-                                    <p>20</p>
+                                <h2><?= $post->title; ?></h2>
+                                <div class="title-border"></div>
+                                <div class="title-footer">
+                                    <div class="post-views">
+                                        <img src="/img/icons/views.svg" alt="">
+                                        <p>500</p>
+                                    </div>
+                                    <div class="post-bookmark">
+                                        <img src="/img/icons/bookmarks.svg" alt="">
+                                        <p>20</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </a>
-                </div>
+                        </a>
+                    </div>
+
+                    <?php endwhile; ?>
+
+                <?php endforeach; ?>
                 <div class="top-post __medium">
                     <a href="" class="post-link">
                         <img src="/img/background/Rectangle 6.png" alt="" class="post-image">
@@ -159,19 +169,22 @@ $this->title = $user->username . ' — ' . 'Личный кабинет';
             </section>
             <section class="best-posts">
                 <div class="post-block">
+
+                    <?php foreach ($posts as $post): ?>
+
                     <div class="post">
                         <a href="#" class="post-link">
-                            <img src="/img/background/Rectangle 7.png" alt="" class="post-image">
+                            <img src="/uploads/<?= $post->photo; ?>" alt="" class="post-image">
                             <div class="post-title">
                                 <div class="title-header">
-                                    <p>Статьи | 02, Янв 2021</p>
+                                    <p><?= $post->category->title; ?> | <?= $post->date; ?></p>
                                 </div>
-                                <h2>5 Вещей которые вы должны знать о ReactJS</h2>
+                                <h2><?= $post->title; ?></h2>
                                 <div class="title-border"></div>
                                 <div class="title-footer">
                                     <div class="post-views">
                                         <img src="/img/icons/views.svg" alt="">
-                                        <p>250</p>
+                                        <p><?= $post->viewed?></p>
                                     </div>
                                     <div class="post-bookmark">
                                         <img src="/img/icons/bookmarks.svg" alt="">
@@ -181,117 +194,9 @@ $this->title = $user->username . ' — ' . 'Личный кабинет';
                             </div>
                         </a>
                     </div>
-                    <div class="post">
-                        <a href="#" class="post-link">
-                            <img src="/img/background/Rectangle 7.png" alt="" class="post-image">
-                            <div class="post-title">
-                                <div class="title-header">
-                                    <p>Статьи | 02, Янв 2021</p>
-                                </div>
-                                <h2>5 Вещей которые вы должны знать о ReactJS</h2>
-                                <div class="title-border"></div>
-                                <div class="title-footer">
-                                    <div class="post-views">
-                                        <img src="/img/icons/views.svg" alt="">
-                                        <p>250</p>
-                                    </div>
-                                    <div class="post-bookmark">
-                                        <img src="/img/icons/bookmarks.svg" alt="">
-                                        <p>50</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="post">
-                        <a href="#" class="post-link">
-                            <img src="/img/background/Rectangle 7.png" alt="" class="post-image">
-                            <div class="post-title">
-                                <div class="title-header">
-                                    <p>Статьи | 02, Янв 2021</p>
-                                </div>
-                                <h2>5 Вещей которые вы должны знать о ReactJS</h2>
-                                <div class="title-border"></div>
-                                <div class="title-footer">
-                                    <div class="post-views">
-                                        <img src="/img/icons/views.svg" alt="">
-                                        <p>250</p>
-                                    </div>
-                                    <div class="post-bookmark">
-                                        <img src="/img/icons/bookmarks.svg" alt="">
-                                        <p>50</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="post">
-                        <a href="#" class="post-link">
-                            <img src="/img/background/Rectangle 7.png" alt="" class="post-image">
-                            <div class="post-title">
-                                <div class="title-header">
-                                    <p>Статьи | 02, Янв 2021</p>
-                                </div>
-                                <h2>5 Вещей которые вы должны знать о ReactJS</h2>
-                                <div class="title-border"></div>
-                                <div class="title-footer">
-                                    <div class="post-views">
-                                        <img src="/img/icons/views.svg" alt="">
-                                        <p>250</p>
-                                    </div>
-                                    <div class="post-bookmark">
-                                        <img src="/img/icons/bookmarks.svg" alt="">
-                                        <p>50</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="post">
-                        <a href="#" class="post-link">
-                            <img src="/img/background/Rectangle 7.png" alt="" class="post-image">
-                            <div class="post-title">
-                                <div class="title-header">
-                                    <p>Статьи | 02, Янв 2021</p>
-                                </div>
-                                <h2>5 Вещей которые вы должны знать о ReactJS</h2>
-                                <div class="title-border"></div>
-                                <div class="title-footer">
-                                    <div class="post-views">
-                                        <img src="/img/icons/views.svg" alt="">
-                                        <p>250</p>
-                                    </div>
-                                    <div class="post-bookmark">
-                                        <img src="/img/icons/bookmarks.svg" alt="">
-                                        <p>50</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="post">
-                        <a href="#" class="post-link">
-                            <img src="/img/background/Rectangle 7.png" alt="" class="post-image">
-                            <div class="post-title">
-                                <div class="title-header">
-                                    <p>Статьи | 02, Янв 2021</p>
-                                </div>
-                                <h2>5 Вещей которые вы должны знать о ReactJS</h2>
-                                <div class="title-border"></div>
-                                <div class="title-footer">
-                                    <div class="post-views">
-                                        <img src="/img/icons/views.svg" alt="">
-                                        <p>250</p>
-                                    </div>
-                                    <div class="post-bookmark">
-                                        <img src="/img/icons/bookmarks.svg" alt="">
-                                        <p>50</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+
+                    <?php endforeach; ?>
+
             </section>
             <section class="load-more__button">
                 <a href="" class="load-more">Больше постов</a>
