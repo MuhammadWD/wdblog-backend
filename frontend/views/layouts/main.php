@@ -174,12 +174,12 @@ AppAsset::register($this);
                     <h3>или используя почту</h3>
                     <?php $form = ActiveForm::begin(['class' => 'join-form']); ?>
 
-                        <? // $form->field($login, 'email')->textInput()->label('Email') ?>
+                        <? $form->field($login, 'email')->textInput()->label('Email') ?>
 
-                        <? // $form->field($login, 'username')->textInput(['autofocus' => true])
-                            //->label('Username'); ?>
+                        <? $form->field($login, 'username')->textInput(['autofocus' => true])
+                            ->label('Username'); ?>
 
-                        <? // $form->field($login, 'password')->passwordInput()->label('Password') ?>
+                        <? $form->field($login, 'password')->passwordInput()->label('Password') ?>
 
                         <div class="toggle-button toggle-button--tuli">
                             <input id="toggleButton11" type="checkbox">
